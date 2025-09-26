@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>BergFit - Seu Guia de Treinos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container" id="inicio">
+    <h1>🥊 TreinoFácil</h1>
+    <p>Seu guia de treinos com demonstrações em GIF.<br>
+       Aprenda a execução correta e acompanhe seu descanso.</p>
+    
+    <!-- Botão que abre o login -->
+    <button class="btn" onclick="mostrarLogin()">Entrar</button>
+
+    <!-- Login -->
+    <div class="login" id="loginBox">
+      <input type="text" placeholder="Usuário" id="usuario">
+      <input type="password" placeholder="Senha" id="senha">
+      <button class="btn" onclick="fazerLogin()">Entrar</button>
+    </div>
+
+    <!-- Timer -->
+    <div class="timer" id="timerBox">
+      <h3>⏱️ Timer de Descanso</h3>
+      <label>Segundos: </label>
+      <input type="number" id="inputSegundos" value="30" min="5"><br>
+      <div id="tempo">00:30</div>
+      <button class="btn" id="botaoControle" onclick="controleTimer()">Iniciar</button>
+    </div>
+
+    <!-- Categorias -->
+    <div class="categorias" id="categoriasBox">
+      <div class="card" onclick="abrirGaleria('peito')">💪 Peito</div>
+      <div class="card" onclick="abrirGaleria('costas')">🏋️‍♂️ Costas</div>
+      <div class="card" onclick="abrirGaleria('pernas')">🦵 Pernas</div>
+      <div class="card" onclick="abrirGaleria('ombros')">🏋️ Ombros</div>
+      <div class="card" onclick="abrirGaleria('bracos')">💪 Braços</div>
+      <div class="card" onclick="abrirGaleria('tríceps')">💪 Tríceps</div>
+      <div class="card" onclick="abrirGaleria('antebraço')">💪 Antebraço</div>
+      <div class="card" onclick="abrirGaleria('abdomen')">🔥 Abdômen</div>
+      <div class="card" onclick="abrirGaleria('alongamento')">🧘 Alongamento</div>
+      <div class="card" onclick="abrirGaleria('aerobico')">🏃 Aeróbicos</div>
+      <div class="card" onclick="abrirGaleria('pilates')">🧘 Pilates</div>
+      <div class="card" onclick="abrirGaleria('cross')">🏋️ CrossFit</div>
+      <div class="card" onclick="calculadora()">🧮 CalculadoraFit</div>
+    
+    </div>
+
+    <!-- Galeria -->
+    <div class="galeria" id="galeriaBox"></div>
+
+    
+
+    <!-- Botão voltar -->
+    <div class="voltar" id="voltarBtn" style="display:none;">
+      <button class="btn" onclick="voltarCategorias()">⬅ Voltar</button>
+    </div>
+
+    <footer>© Berg Andrade 2025</footer>
+  </div>
+
+  <!-- Modal GIF -->
+  <div id="modal">
+    <span onclick="fecharModal()">&times;</span>
+    <img id="modalImg">
+  </div>
+
+  <!-- Som de gongo -->
+  <audio id="somGongo" loop>
+    <source src="audio/gong-sound2.mp3" type="audio/ogg">
+  </audio>
+
+  <script src="script.js"> </script>
+
+</body>
+</html>
