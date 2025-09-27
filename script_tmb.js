@@ -24,10 +24,12 @@ function calcularTMB(){
     
 
     let res = window.document.getElementById("resposta1");
+    res.style.background = " #5f5c5c";
     
     let resGet = window.document.getElementById("resposta2");
     resGet.style.fontSize = "30px";
     resGet.style.textAlign = "center";
+    resGet.style.display = "block";
     
     let getTexto = window.document.getElementById("getTexto")
     
@@ -35,9 +37,11 @@ function calcularTMB(){
     
     
     
+    
     let resTmb = window.document.getElementById("get");
     resTmb.style.fontSize = "30px";
     resTmb.style.textAlign = "center";
+    resTmb.style.display = "block";
     let tmbTexto = window.document.getElementById("tmbTexto")
     let tmbTexto1 = window.document.getElementById("tmbTexto1")
     
@@ -45,6 +49,7 @@ function calcularTMB(){
     let resGse = window.document.getElementById("gse")
     resGse.style.fontSize = "30px";
     resGse.style.textAlign = "center";
+    resGse.style.display = "block";
     let gseTexto = window.document.getElementById("gseTexto")
     let gseTexto1 = window.document.getElementById("gseTexto1")
     

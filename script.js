@@ -5,11 +5,16 @@ function mostrarLogin() {
       
     }
 
+
+
     function fazerLogin() {
       const user = document.getElementById("usuario").value;
       const pass = document.getElementById("senha").value;
 
-      if (user === "aluno" && pass === "1234" || user === "Berg" && pass === "berg") {
+      const usuario = ["berg", "aluno", "rose"];
+      const senha = ["berg", 1234, "docinho"];
+
+      if (true === usuario.includes(user) && true === senha.includes(pass)) {
         let loginBox = document.getElementById("loginBox");
           loginBox.style.display = "none";
         document.querySelector(".categorias").style.display = "grid";
@@ -496,6 +501,7 @@ function mostrarLogin() {
      window.onload = function() {
       if (this.sessionStorage.getItem("voltarCategorias") === "true") {
         voltarCategorias();
+        
       this.sessionStorage.removeItem("voltarCategorias");
       }
      }
