@@ -438,20 +438,24 @@ function mostrarLogin() {
 
   function abrirGaleria(categoria) {
   const galeria = document.getElementById("galeriaBox");
-  galeria.innerHTML = ""; 
+  galeria.innerHTML = "";
+
+  // Define layout em grid de 2 colunas
+  galeria.style.display = "grid";
+  galeria.style.gridTemplateColumns = "repeat(2, 1fr)";
+  galeria.style.gap = "20px";
+  galeria.style.justifyItems = "center"; // centraliza cada bloco
 
   gifs[categoria].forEach(src => {
-    // Cria um container para a imagem e legenda
+    // Container para imagem + legenda
     let container = document.createElement("div");
-    container.style.display = "inline-block";
     container.style.textAlign = "center";
-    container.style.margin = "10px";
 
     // Imagem
     let img = document.createElement("img");
     img.src = src;
-    img.style.width = "130px";
-    img.style.margin = "10px";
+    img.alt = categoria;
+    img.style.width = "150px";
     img.style.cursor = "pointer";
     img.style.borderRadius = "10px";
     img.style.boxShadow = "5px 5px 10px #200606f3";
@@ -467,19 +471,18 @@ function mostrarLogin() {
     legenda.style.color = "white";
     legenda.style.marginTop = "5px";
     legenda.style.fontSize = "12px";
-    legenda.style.fontFamily = "Arial, sans-serif";
-    legenda.style.wordBreak = "break-word";  
-    legenda.style.whiteSpace = "normal";  
-    legenda.style.maxWidth = "130px";  
-    legenda.style.textAlign = "center";  
+    legenda.style.wordBreak = "break-word";
+    legenda.style.maxWidth = "130px";
 
-    // Junta os dois
+    // Junta imagem + legenda
     container.appendChild(img);
     container.appendChild(legenda);
 
-    // Adiciona o container na galeria
+    // Adiciona na galeria
     galeria.appendChild(container);
   });
+
+
 
   document.getElementById("categoriasBox").style.display = "none";
   galeria.style.display = "grid";
