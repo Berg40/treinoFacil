@@ -443,16 +443,19 @@ function mostrarLogin() {
   gifs[categoria].forEach(src => {
     // Cria um container para a imagem e legenda
     let container = document.createElement("div");
-    container.style.display = "flex";
-    container.style.flexDirection = "column"; // empilha vertical
-    container.style.alignItems = "center"; // centraliza
+    container.style.display = "inline-block";
+    container.style.textAlign = "center";
     container.style.margin = "10px";
 
     // Imagem
     let img = document.createElement("img");
     img.src = src;
-    img.style.maxWidth = "130px"; 
+    img.style.width = "130px";
+    img.style.margin = "10px";
     img.style.cursor = "pointer";
+    img.style.borderRadius = "10px";
+    img.style.boxShadow = "5px 5px 10px #200606f3";
+    img.style.backgroundColor = "black";
     img.addEventListener("click", () => abrirModal(src));
 
     // Extrai nome do arquivo (sem pasta e sem .gif)
@@ -480,7 +483,7 @@ function mostrarLogin() {
 
   document.getElementById("categoriasBox").style.display = "none";
   galeria.style.display = "grid";
-  galeria.style.gridTemplateColumns = "repeat(auto-fit, minmax(150px, 1fr))"; // grade responsiva
+  
   galeria.style.gap = "15px";
 
   document.getElementById("voltarBtn").style.display = "block";
