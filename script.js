@@ -9,7 +9,7 @@ function mostrarLogin() {
       const user = document.getElementById("usuario").value;
       const pass = document.getElementById("senha").value;
 
-      if (user === "aluno" && pass === "123") {
+      if (user === "aluno" && pass === "1234" || user === "Berg" && pass === "berg") {
         let loginBox = document.getElementById("loginBox");
           loginBox.style.display = "none";
         document.querySelector(".categorias").style.display = "grid";
@@ -517,6 +517,7 @@ function mostrarLogin() {
       modal.addEventListener("click", () => {
         modal.style.display = "none";
     });
+    
     }
 
     // Timer --------------------------
