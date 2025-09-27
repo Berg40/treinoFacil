@@ -431,7 +431,7 @@ function mostrarLogin() {
         "img/alongamento/ALONGAMENTO39.gif",
         "img/alongamento/ALONGAMENTO40.gif",
 
-    ],
+    ]
     };
 
 
@@ -487,7 +487,12 @@ function mostrarLogin() {
   document.getElementById("timerBox").style.display = "block";
 }
 
-     
+     window.onload = function() {
+      if (this.sessionStorage.getItem("voltarCategorias") === "true") {
+        voltarCategorias();
+      this.sessionStorage.removeItem("voltarCategorias");
+      }
+     }
 
     function voltarCategorias() {
       document.getElementById("galeriaBox").style.display = "none";
@@ -572,6 +577,34 @@ function mostrarLogin() {
       document.getElementById("botaoControle").textContent = "Iniciar";
       estado = "parado";
     }
+
+
+
+
+// Bloqueia botão direito
+    document.addEventListener("contextmenu", function(e) {
+        e.preventDefault();
+        alert("Função desabilitada!");
+    });
+
+    // Bloqueia clique com botão do mouse
+    document.addEventListener("mousedown", function(e) {
+        if (e.button === 2 || e.button === 1) { 
+            e.preventDefault();
+        }
+    });
+
+const botoes = document.querySelectorAll(".botoes"); /* Seleciona todos os botões */
+botoes.forEach(botao => {
+    botao.addEventListener("click", () => {
+        // Remove a classe 'ativo' de todos os botões
+        botoes.forEach(b => b.classList.remove("ativo"));
+        // Adiciona a classe 'ativo' ao botão clicado
+        botao.classList.add("ativo");
+    });
+});
+
+
 
 function calculadora() {
   window.location.href = "calculadora.html";

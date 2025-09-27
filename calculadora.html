@@ -8,9 +8,9 @@
 </head>
 <body>
     <header>
-        <img class="imgTitulo" src="img/logo.png">
-        <h1 >Gasto Calórico </h1>
-        <img class="imgTitulo" src="img/logo.png">
+        
+        <h1 >Calculadora (GET) (TMB) (GSE) </h1>
+        
     </header>
 
     <section>
@@ -23,9 +23,9 @@
             <label for="sexo_mulher"><b>Mulher</b></label>
             </p>
 
-            <p><b>Idade:</b> <input type="number" id="idade" placeholder="30" style="width: 140px;"></p>
-            <p><b>Peso:</b> <input type="number" id="peso" placeholder="70                         kg" style="width: 140px;"></p>
-            <p><b>Altura:</b> <input type="number" id="altura" placeholder="180                       cm" style="width: 140px;"></p>
+            <p><b>Idade:</b> <input type="number" id="idade" placeholder="30 anos" style="width: 140px;"></p>
+            <p><b>Peso:</b> <input type="number" id="peso" placeholder="70 kg" style="width: 140px;"></p>
+            <p><b>Altura:</b> <input type="number" id="altura" placeholder="180 cm" style="width: 140px;"></p>
 
             <p><b>Nível de Atividade Física:<br></b> 
             <select id="nivel"  style="border-radius: 10px; height: 25px; width: 100px;">
@@ -38,12 +38,13 @@
             </select>
             </p>
             <button class="btn" id="button" onclick="processar()">Calcular</button>
-            <button class="btn" id="voltar" onclick="voltar()" style="width: 80px;">Voltar</button>
+            
             
         </div>
         
-        <div class ="resposta1" id="resposta1"><h2>Confira</h2></div>
+        <div class="dadosResp" id="dadosResp">
 
+        <div class ="resposta1" id="resposta1"><h2>Confira</h2></div>
 
         <div class="resp2">
         <div class="item" id="getTexto"><h2 style="margin: 15px;">Gasto Energético Total</h2></div>
@@ -61,6 +62,8 @@
         <div class="item" id="gseTexto"><h2 style="margin: 25px;">Gasto semanal de energia</h2></div>
         <div class="resposta3" id="gse"></div>
         <div class="item2" id="gseTexto1"></div>
+        </div>
+
         </div>
 
         <div class="flexP">
@@ -108,8 +111,9 @@
         </div>
             
     </section>
+    <button class="btn2" id="voltar" onclick="voltar()">Voltar</button>
 
-    <footer>Copyright &copy; 2025 Berg Andrade.</footer>
+    <footer>Copyright &copy; 2025 Berg Andrade</footer>
 
     <script src="script_tmb.js"></script>
     

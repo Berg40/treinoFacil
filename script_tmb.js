@@ -20,6 +20,9 @@ function calcularTMB(){
 
     const nivelAtv = window.document.getElementById("nivel").value;
 
+    
+    
+
     let res = window.document.getElementById("resposta1");
     
     let resGet = window.document.getElementById("resposta2");
@@ -173,6 +176,8 @@ function calcularTMB(){
     else {
         alert("Escolha um sexo!!")
     }
+
+   
       
 }
 
@@ -190,7 +195,8 @@ function processar() {
 
 
 function voltar() {
-  window.location.href = "treinos.html";
+    sessionStorage.setItem("voltarCategorias", "true");
+    window.location.href = "index.html";
 }
 
 

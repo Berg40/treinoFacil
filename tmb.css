@@ -24,6 +24,7 @@
     }
 
     header h1 {
+      padding: 20px;
       font-size: 24px;
       color: #0f0;
       text-shadow: 1px 1px 4px #000;
@@ -48,9 +49,11 @@
     .dados {
       background: #1a1a1a;
       padding: 20px;
+      padding-left: 40px;
       border-radius: 12px;
       box-shadow: 0 4px 10px #00000066;
       display: flex;
+      
       flex-direction: column;
       gap: 15px;
     }
@@ -60,6 +63,7 @@
     }
 
     input, select {
+     
       padding: 6px;
       border-radius: 8px;
       border: none;
@@ -83,17 +87,39 @@
       background: #0c0;
     }
 
+  .btn2 {
+  display: inline-block;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: clamp(14px, 4vw, 18px);
+  cursor: pointer;
+  background: #ff4444;
+  color: white;
+  transition: 0.3s;
+  width: 100%;
+  }
+  .btn2:hover { background: #ff2222; }
+
+    .resposta1 {
+      text-align: center;
+    }
+    
+    
+
     .resposta1, .resposta2, .resposta3 {
+      text-align: center;
       background: #5f5c5c;
       border-radius: 12px;
-      padding: 15px;
+      padding: 13px;
       margin-top: 10px;
       margin: auto;
-      box-shadow: 0 4px 8px #f7e75ec2;
+      box-shadow: 0 4px 8px #0c0c0cc2;
     }
 
     .resp2 {
       width: 400px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       gap: 10px;

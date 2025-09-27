@@ -6,20 +6,21 @@
 }
 
 body {
-  background: linear-gradient(135deg, #111, #222);
-  color: white;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px; /* para não colar nas bordas no mobile */
+    background: linear-gradient(135deg, #111, #222);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+ 
 }
 
 .container {
   width: 100%;
   max-width: 600px; /* limite no desktop */
   background: rgba(255, 255, 255, 0.05);
-  padding: 5vw; /* relativo à tela */
+  padding: 10px; 
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 0 20px rgba(255,0,0,0.3);
@@ -138,7 +139,7 @@ footer { margin-top: 20px; font-size: 12px; color: #888; text-align: center; }
 #modal {
   display: none;
   position: fixed;
-  z-index: 1000;
+  
   left: 0;
   top: 0;
   width: 100%;
@@ -167,10 +168,10 @@ footer { margin-top: 20px; font-size: 12px; color: #888; text-align: center; }
 
 /* Miniaturas da galeria */
 #galeriaBox img {
-  width: 100%; /* ocupa a largura da coluna responsiva */
+  width: 90%; /* ocupa a largura da coluna responsiva */
   max-width: 180px;
   margin: 10px auto;
-  display: block;
+  
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -179,9 +180,3 @@ footer { margin-top: 20px; font-size: 12px; color: #888; text-align: center; }
   transform: scale(1.1);
 }
 
-/* Ajustes extras para telas muito pequenas */
-@media (max-width: 400px) {
-  .container { padding: 20px; }
-  .btn { font-size: 14px; }
-  .galeria { grid-template-columns: 1fr; }
-}
